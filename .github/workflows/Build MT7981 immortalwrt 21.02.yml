@@ -55,7 +55,7 @@ jobs:
       run: |
         cd immortalwrt/bin/targets/*/*
         rm -rf packages
-        find . -name "*factory.bin" | xargs rm -rf
+        # find . -name "*factory.bin" | xargs rm -rf
         find . -name "*initramfs-kernel.bin" | xargs rm -rf
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
